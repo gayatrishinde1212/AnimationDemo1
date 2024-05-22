@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Basics</title>
+    <style>
+        body{
+            height:500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:50px;
+            background-color: aliceblue;
+
+        }
+        #box1{
+            background-color: aqua;
+            height: 50px;
+            width: 50px;
+        }
+        #box2{
+            background-color: pink;
+            height: 50px;
+            width: 50px;
+        }
+        #box3{
+            background-color: orange;
+            height: 50px;
+            width: 50px;
+        }
+        #box4{
+            background-color: green;
+            height: 50px;
+            width: 50px;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // gsap.to('#box1',{x:'25px',delay:0.5,duration:3})
+        // gsap.fromTo('#box2',{y:'-200'},{y:'0px',delay:0.5,duration:3})
+        // gsap.fromTo('#box3',{y:'200px'},{y:'0px',delay:0.5,duration:3})
+        // gsap.to('#box4',{x:'-25px',delay:0.5,duration:3})
+        
+        
+        gsap.from('#box1',{x:'-200px',delay:0.5,scale:'0.5',rotateX:'45deg',repeat:4,duration:1})
+        gsap.fromTo('#box2',{y:'-200'},{y:'0px',delay:0.5,repeat:4,duration:1})
+        gsap.fromTo('#box3',{y:'200px'},{y:'0px',delay:0.5,repeat:4,duration:1})
+        gsap.from('#box4',{x:'200px',delay:0.5,scale:'0.5',rotateY:'45deg',repeat:4,duration:1})
+        
+    </script>
+
+</body>
+</html>
